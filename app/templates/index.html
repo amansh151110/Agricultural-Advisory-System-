@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_cal.html" import bar, months, legend with context %}
+{% block page %}home{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Sow, grow and harvest on time.</h1>
+  <p class="lead">
+    {% if sow %}This month, sow <b>{{ sow|map(attribute='name')|join(', ') }}</b>.{% else %}No major sowing window this month.{% endif %}
+    {% if harvest %} Harvest <b>{{ harvest|map(attribute='name')|join(', ') }}</b>.{% endif %}
+  </p>
+</section>
+<section class="cal">
+  <div class="tools">
+    <div class="chips" id="chips">
+      <button class="on" data-season="">All</button>
+      {% for s in ['Kharif','Rabi','Annual'] %}<button data-season="{{ s }}">{{ s }}</button>{% endfor %}
+    </div>
+    <input id="q" type="search" placeholder="Search crop, e.g. गेहूँ or rice" aria-label="Search crops">
+  </div>
+  {{ legend() }}
+  <div class="row head"><span></span><span></span>{{ months() }}</div>
+  {% for c in crops %}
+  <a class="row crop" href="{{ url_for('pages.crop', crop_id=c.id) }}" data-season="{{ c.season }}" data-name="{{ c.name|lower }} {{ c.hindi }}">
+    <strong>{{ c.name }}<small>{{ c.hindi }}</small></strong><em>{{ c.season }}</em>{{ bar(c) }}
+  </a>
+  {% endfor %}
+  <p id="none" hidden>No crop matches. Clear the search or pick All.</p>
+</section>
+{% endblock %}

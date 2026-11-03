@@ -1,0 +1,9 @@
+{% macro bar(c) %}
+<div class="bar" role="img" aria-label="Sow in {{ c.sow|map('int')|map('string')|join(', ') }} (month numbers); harvest in {{ c.harvest|join(', ') }}">
+  {%- for m in range(1, 13) -%}
+  <i class="{{ 'sow' if m in c.sow else 'harv' if m in c.harvest else '' }}{{ ' now' if m == now_m }}" title="{{ MONTHS[m-1] }}"></i>
+  {%- endfor -%}
+</div>
+{% endmacro %}
+{% macro months() %}<div class="bar months">{% for m in MONTHS %}<span class="{{ 'now' if loop.index == now_m }}">{{ m[0] }}</span>{% endfor %}</div>{% endmacro %}
+{% macro legend() %}<p class="legend"><i class="sw sow"></i>Sow <i class="sw harv"></i>Harvest <i class="sw now"></i>This month</p>{% endmacro %}

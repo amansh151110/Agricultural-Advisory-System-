@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Weather advice · Kisan Advisor{% endblock %}
+{% block page %}weather{% endblock %}
+{% block content %}
+<h1 class="crop-h">Weather advice</h1>
+<form class="tools" id="wform">
+  <label>City <select id="city">{% for c in cities %}<option>{{ c }}</option>{% endfor %}</select></label>
+  <label>Crop <select id="crop"><option value="">Any crop</option>{% for c in crops %}<option value="{{ c.id }}">{{ c.name }}</option>{% endfor %}</select></label>
+  <button class="btn" type="submit">Get 7-day advice</button>
+</form>
+<p id="wstatus" class="muted" role="status">Pick a city to see the forecast and what it means for your field.</p>
+<div id="advice" class="advice"></div>
+<div id="days" class="days"></div>
+{% endblock %}

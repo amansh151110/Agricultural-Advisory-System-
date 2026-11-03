@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_cal.html" import bar, months, legend with context %}
+{% block title %}{{ c.name }} · Kisan Advisor{% endblock %}
+{% block content %}
+<a class="back" href="{{ url_for('pages.index') }}">Back to calendar</a>
+<h1 class="crop-h">{{ c.name }} <small>{{ c.hindi }} · {{ c.season }}</small></h1>
+<section class="cal">{{ legend() }}{{ months() }}{{ bar(c) }}</section>
+<dl class="facts">
+  <div><dt>Soil</dt><dd>{{ c.soil }}</dd></div>
+  <div><dt>Temperature</dt><dd>{{ c.temp[0] }}–{{ c.temp[1] }} °C</dd></div>
+  <div><dt>Duration</dt><dd>{{ c.days }} days</dd></div>
+  <div><dt>Expected yield</dt><dd>{{ c.yield }}</dd></div>
+  <div><dt>Water</dt><dd>{{ c.water }}</dd></div>
+  <div><dt>Fertiliser</dt><dd>{{ c.fertilizer }}</dd></div>
+</dl>
+<h2>Field tips</h2>
+<ul class="tips">{% for t in c.tips %}<li>{{ t }}</li>{% endfor %}</ul>
+<h2>Pests and diseases</h2>
+{% for p in c.problems %}
+<details class="prob">
+  <summary>{{ p.name }}</summary>
+  <p><b>Look for:</b> {{ p.symptoms }}</p>
+  <p><b>Prevent:</b> {{ p.prevention }}</p>
+  <p><b>Treat:</b> {{ p.cure }}</p>
+</details>
+{% endfor %}
+<p><a class="btn" href="{{ url_for('pages.weather_page') }}?crop={{ c.id }}">Check this week's weather for {{ c.name }}</a></p>
+{% endblock %}

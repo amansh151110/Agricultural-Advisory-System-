@@ -1,0 +1,37 @@
+[
+ {"id":"wheat","name":"Wheat","hindi":"गेहूँ","season":"Rabi","sow":[10,11,12],"harvest":[3,4],"temp":[10,25],"soil":"Well-drained loam or clay loam","water":"4–6 irrigations: crown root, tillering, jointing, flowering, milking","days":"120–150","yield":"40–55 q/ha","fertilizer":"120 kg N, 60 kg P2O5, 40 kg K2O per ha; half the N at sowing",
+  "tips":["Sow by mid-November for the best yield; each week of delay after that costs about 30–40 kg/ha.","Use certified seed treated with a fungicide.","Irrigate at crown root initiation (20–25 days after sowing) without fail."],
+  "problems":[
+   {"name":"Yellow rust","symptoms":"Yellow stripes of powdery spores along leaves, leaves dry early","prevention":"Grow resistant varieties, avoid late sowing, scout from January","cure":"Spray propiconazole 25% EC at 1 ml/litre at first sign"},
+   {"name":"Aphids","symptoms":"Clusters of small green insects on ears and leaves, sticky honeydew","prevention":"Timely sowing, conserve ladybird beetles","cure":"Spray imidacloprid 17.8 SL at 0.5 ml/litre or neem oil 5 ml/litre"}]},
+ {"id":"rice","name":"Rice (Paddy)","hindi":"धान","season":"Kharif","sow":[6,7],"harvest":[10,11],"temp":[20,35],"soil":"Clay or clay loam that holds standing water","water":"5 cm standing water through tillering; drain 10 days before harvest","days":"110–150","yield":"45–60 q/ha","fertilizer":"120 kg N, 60 kg P2O5, 40 kg K2O per ha; N in three splits",
+  "tips":["Nursery in June, transplant 25–30 day old seedlings.","Alternate wetting and drying saves up to 25% water.","Harvest when 80% of grains turn straw-coloured."],
+  "problems":[
+   {"name":"Blast","symptoms":"Spindle-shaped leaf spots with grey centres, neck of panicle turns black","prevention":"Avoid excess nitrogen, use resistant varieties, treat seed","cure":"Spray tricyclazole 75 WP at 0.6 g/litre"},
+   {"name":"Stem borer","symptoms":"Dead central shoot in young plants, white empty panicles later","prevention":"Clip seedling tips before transplanting, use light traps","cure":"Apply cartap hydrochloride 4G at 18 kg/ha"}]},
+ {"id":"maize","name":"Maize","hindi":"मक्का","season":"Kharif","sow":[6,7],"harvest":[9,10],"temp":[21,32],"soil":"Fertile, well-drained sandy loam","water":"Critical at knee-high, tasseling and grain filling; waterlogging kills seedlings","days":"90–110","yield":"50–65 q/ha","fertilizer":"120 kg N, 60 kg P2O5, 40 kg K2O per ha",
+  "tips":["Sow on ridges so excess rain drains away.","Keep rows 60 cm apart and plants 20 cm apart.","Earth up at 30 days to prevent lodging."],
+  "problems":[
+   {"name":"Fall armyworm","symptoms":"Ragged leaf holes, sawdust-like frass in the whorl","prevention":"Seed treatment, early sowing, pheromone traps","cure":"Spray emamectin benzoate 5 SG at 0.4 g/litre into the whorl"},
+   {"name":"Turcicum leaf blight","symptoms":"Long grey-green cigar-shaped lesions on leaves","prevention":"Resistant hybrids, crop rotation, remove residue","cure":"Spray mancozeb 75 WP at 2.5 g/litre"}]},
+ {"id":"cotton","name":"Cotton","hindi":"कपास","season":"Kharif","sow":[4,5,6],"harvest":[10,11,12],"temp":[21,37],"soil":"Deep black or alluvial soil with good drainage","water":"6–8 irrigations; avoid stress at flowering and boll formation","days":"150–180","yield":"15–25 q/ha","fertilizer":"100 kg N, 50 kg P2O5, 50 kg K2O per ha",
+  "tips":["Sow after the first good pre-monsoon rain or with irrigation in April–May.","Pick bolls only when fully open and dry.","Rotate with a cereal to reduce pest build-up."],
+  "problems":[
+   {"name":"Pink bollworm","symptoms":"Rosette flowers, damaged bolls with pink larvae inside","prevention":"Short-duration varieties, destroy stalks after harvest, pheromone traps","cure":"Spray profenofos 50 EC at 2 ml/litre on economic threshold"},
+   {"name":"Leaf curl virus","symptoms":"Upward curling, thickened veins, stunted plants","prevention":"Control whitefly, remove weeds and infected plants","cure":"Spray diafenthiuron 50 WP at 1 g/litre to stop whitefly spread"}]},
+ {"id":"mustard","name":"Mustard","hindi":"सरसों","season":"Rabi","sow":[10],"harvest":[2,3],"temp":[10,25],"soil":"Light to medium loam, neutral pH","water":"1–2 irrigations: branching and flowering","days":"110–140","yield":"15–25 q/ha","fertilizer":"80 kg N, 40 kg P2O5, 40 kg S per ha",
+  "tips":["Sow in the first fortnight of October.","Thin to 10–15 cm between plants at 3 weeks.","Harvest when 75% of pods turn yellow-brown."],
+  "problems":[
+   {"name":"Mustard aphid","symptoms":"Dense colonies on flower spikes, shrivelled pods","prevention":"Sow early, avoid late nitrogen","cure":"Spray dimethoate 30 EC at 1.5 ml/litre"},
+   {"name":"White rust","symptoms":"White blister-like pustules under leaves, swollen distorted flowers","prevention":"Resistant varieties, seed treatment with metalaxyl","cure":"Spray mancozeb 2.5 g/litre at first symptoms"}]},
+ {"id":"tomato","name":"Tomato","hindi":"टमाटर","season":"Rabi","sow":[9,10],"harvest":[12,1,2],"temp":[15,30],"soil":"Well-drained sandy loam rich in organic matter","water":"Light irrigation every 5–7 days; drip is best","days":"100–130","yield":"250–400 q/ha","fertilizer":"120 kg N, 80 kg P2O5, 60 kg K2O per ha plus 20 t FYM",
+  "tips":["Raise seedlings in a nursery and transplant after 25 days.","Stake plants to keep fruit off the soil.","Mulch to hold moisture and cut weeds."],
+  "problems":[
+   {"name":"Early blight","symptoms":"Brown rings like a target on older leaves, leaf drop","prevention":"Crop rotation, remove infected leaves, drip not overhead water","cure":"Spray chlorothalonil 2 g/litre every 10 days"},
+   {"name":"Fruit borer","symptoms":"Round holes in fruit, caterpillar inside","prevention":"Marigold border rows, pheromone traps","cure":"Spray spinosad 45 SC at 0.3 ml/litre"}]},
+ {"id":"sugarcane","name":"Sugarcane","hindi":"गन्ना","season":"Annual","sow":[2,3],"harvest":[12,1],"temp":[20,35],"soil":"Deep, well-drained loam or clay loam","water":"Every 7–10 days in summer, 20–25 days in winter","days":"300–365","yield":"700–900 q/ha","fertilizer":"150 kg N, 60 kg P2O5, 60 kg K2O per ha",
+  "tips":["Use 3-budded setts treated with a fungicide.","Trash mulching conserves water.","Harvest close to the ground; the base holds the most sugar."],
+  "problems":[
+   {"name":"Red rot","symptoms":"Reddish stalk interior with white cross bands, sour smell","prevention":"Disease-free setts, resistant varieties, avoid ratooning infected fields","cure":"Remove and burn infected clumps; dip setts in carbendazim 1 g/litre"},
+   {"name":"Early shoot borer","symptoms":"Dead heart in young shoots that pulls out easily","prevention":"Early planting, earth up at 60 days","cure":"Apply chlorantraniliprole 0.4 G at 20 kg/ha"}]}
+]

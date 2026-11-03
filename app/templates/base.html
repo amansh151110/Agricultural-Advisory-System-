@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Kisan Advisor{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="{% block page %}{% endblock %}">
+  <header class="top">
+    <a class="brand" href="{{ url_for('pages.index') }}">Kisan Advisor</a>
+    <nav>
+      <a href="{{ url_for('pages.index') }}" {% if request.endpoint == 'pages.index' %}aria-current="page"{% endif %}>Crop calendar</a>
+      <a href="{{ url_for('pages.weather_page') }}" {% if request.endpoint == 'pages.weather_page' %}aria-current="page"{% endif %}>Weather advice</a>
+      <a href="{{ url_for('pages.doctor') }}" {% if request.endpoint == 'pages.doctor' %}aria-current="page"{% endif %}>Crop doctor</a>
+    </nav>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>Guidance is general. Confirm doses with your local Krishi Vigyan Kendra before spraying.</footer>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
